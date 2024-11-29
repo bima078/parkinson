@@ -1,6 +1,7 @@
 import os
 import pickle
 import streamlit as st
+import joblib as jb
 
 def main():
  # configure the page information
@@ -12,7 +13,7 @@ def main():
     working_dir = os.path.dirname(os.path.abspath(__file__))
     
     # loading the saved models
-    parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/xgbmodel.sav', 'rb'))
+    parkinsons_model = jb.load('saved_models/xgbmodel.sav')
 
      # configure the title
     st.header('Parkinsons Diagnosis!', anchor = False)
