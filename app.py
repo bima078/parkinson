@@ -3,6 +3,10 @@ import pickle
 import streamlit as st
 import joblib as jb
 
+# import modelling libraries
+from xgboost import XGBClassifier
+from sklearn.model_selection import train_test_split
+
 def main():
  # configure the page information
     st.set_page_config(
